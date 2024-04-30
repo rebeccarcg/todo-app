@@ -28,7 +28,7 @@ const TodoList = () => {
     setTasks(tasks.filter((task) => task.id !== id));
   };
 
-  const clearAllTodoItems = () => {
+  const clearAllTasks = () => {
     setTasks([]);
   };
 
@@ -37,7 +37,7 @@ const TodoList = () => {
       <div className="todo-input">
         <input value={text} onChange={(e) => setText(e.target.value)} />
         <button onClick={() => addTask(text)}>Add Todo</button>
-        <button onClick={clearAllTodoItems}>Clear All</button>
+        <button onClick={clearAllTasks}>Clear All</button>
       </div>
 
       <ul className="todo-list">
