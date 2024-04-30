@@ -1,3 +1,9 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  column-gap: 8px;
+}
+
 .todo-item {
   display: flex;
   justify-content: space-between;
