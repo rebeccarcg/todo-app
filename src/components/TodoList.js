@@ -28,6 +28,10 @@ const TodoList = () => {
     setTasks(tasks.filter((task) => task.id !== id));
   };
 
+  const clearAllTodoItems = () => {
+    setTasks([]);
+  };
+
   return (
     <div className="todo-list">
       {tasks.map((task) => (
@@ -35,6 +39,7 @@ const TodoList = () => {
       ))}
       <input value={text} onChange={(e) => setText(e.target.value)} />
       <button onClick={() => addTask(text)}>Add Todo</button>
+      <button onClick={clearAllTodoItems}>Clear All</button>
     </div>
   );
 };
