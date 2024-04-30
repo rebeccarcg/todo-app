@@ -1,9 +1,9 @@
 const TodoItem = ({ task, deleteTask }) => {
   return (
-    <div className="todo-item">
+    <li className="todo-item">
       <p>{task.text}</p>
-      <button onClick={() => deleteTask(task.id)}>X</button>
-    </div>
+      <button onClick={() => deleteTask(task.id)}>Done</button>
+    </li>
   );
 };
 export default TodoItem;

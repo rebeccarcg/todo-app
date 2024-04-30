@@ -33,13 +33,18 @@ const TodoList = () => {
   };
 
   return (
-    <div className="todo-list">
-      {tasks.map((task) => (
-        <TodoItem key={task.id} task={task} deleteTask={deleteTask} />
-      ))}
-      <input value={text} onChange={(e) => setText(e.target.value)} />
-      <button onClick={() => addTask(text)}>Add Todo</button>
-      <button onClick={clearAllTodoItems}>Clear All</button>
+    <div>
+      <div className="todo-input">
+        <input value={text} onChange={(e) => setText(e.target.value)} />
+        <button onClick={() => addTask(text)}>Add Todo</button>
+        <button onClick={clearAllTodoItems}>Clear All</button>
+      </div>
+
+      <ul className="todo-list">
+        {tasks.map((task) => (
+          <TodoItem key={task.id} task={task} deleteTask={deleteTask} />
+        ))}
+      </ul>
     </div>
   );
 };

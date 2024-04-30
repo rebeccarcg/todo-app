@@ -1,11 +1,21 @@
+.container {
+  max-width: 600px;
+}
+
 .navbar {
   display: flex;
   flex-direction: row;
   column-gap: 8px;
 }
 
-.todo-item {
+.todo-input {
+  padding: 32px 0px 0px 40px;
+  line-height: 20px;
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 8px;
+  flex-direction: row;
+  column-gap: 8px;
+
+  input {
+    width: 300px;
+  }
 }
